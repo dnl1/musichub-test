@@ -55,12 +55,17 @@
     <Compile Include="BaseTest.cs" />
     <Compile Include="MusicianTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BearerTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BearerAuthentication\BearerAuthentication.csproj">
+      <Project>{7F622A3E-2AA1-48BC-8C90-E129FDBFAD01}</Project>
+      <Name>BearerAuthentication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MusicHubBusiness\MusicHubBusiness.csproj">
       <Project>{54099567-345E-4299-AF39-9A27BDD6D368}</Project>
       <Name>MusicHubBusiness</Name>
