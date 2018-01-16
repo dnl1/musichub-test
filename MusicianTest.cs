@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MusicHubBusiness.Business;
 using MusicHubBusiness.Models;
@@ -23,6 +24,17 @@ namespace MusicHubTest
             var retorno = musicianBusiness.Create(musician);
 
             bool ok = retorno.id > 0;
+
+            Assert.IsTrue(ok);
+        }
+
+        [TestMethod]
+        public void Musician_SearchByName()
+        {
+            MusicianBusiness musicianBusiness = new MusicianBusiness();
+            var musicians = musicianBusiness.SearchByName("Julia");
+
+            bool ok = musicians.Count() > 0;
 
             Assert.IsTrue(ok);
         }
