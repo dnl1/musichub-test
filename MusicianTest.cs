@@ -12,6 +12,8 @@ namespace MusicHubTest
         [TestMethod]
         public void Musician_Create()
         {
+            Login();
+
             MusicianBusiness musicianBusiness = new MusicianBusiness();
             Musician musician = new Musician
             {
